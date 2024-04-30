@@ -137,11 +137,11 @@ if __name__ == '__main__':
     args = parser.parse_args()
     path_to_result_image = f'{Path(args.path).stem}_{args.method}.bmp'
     temp_output = f'{Path(args.path).stem}_{args.method}_compressed.cbmp'
-
+    start_time = time.time()
+    
     if args.mode == 'compress':
         compress(args.path, temp_output, args.compression, args.method)
     elif args.mode == 'decompress':
         decompress(args.path, path_to_result_image.replace('_compressed', ''))
 
-    start_time = time.time()
     print(f'Working time: {round(time.time() - start_time, 2)} sec.')
