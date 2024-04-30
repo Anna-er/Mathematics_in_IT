@@ -13,15 +13,25 @@
 ## Результаты
 
 Работа методов почти не отличается друг от друга. Например, вот разультаты сжатия в 2 раза:
-![example](img/2/example_numpy.bmp)![example](img/2/example_simple.bmp)![example](img/2/example_advanced.bmp)
+| Numpy                            | Power simple                            | Block power                            |
+|----------------------------------|-----------------------------------------|----------------------------------------|
+| ![example](img/2/example_numpy.bmp) | ![example](img/2/example_simple.bmp) | ![example](img/2/example_advanced.bmp) |
+
 А вот разультаты сжатия в 4 раза:
-![Lena](img/4/Lena_numpy.bmp)![Lena](img/4/Lena_simple.bmp)![Lena](img/4/Lena_advanced.bmp)
+| Numpy                            | Power simple                            | Block power                            |
+|----------------------------------|-----------------------------------------|----------------------------------------|
+| ![Lena](img/4/Lena_numpy.bmp) | ![Lena](img/4/Lena_simple.bmp) | ![Lena](img/4/Lena_advanced.bmp) |
 
 
 Теперь сожмем довольно большое(`1000 * 667`) изображение в 2, 4, 8, 16, 32 и 64 раз:
 - на фото ниже результат работы `advance` метода. С другими результатами можно ознакомиться [здесь](img/deg)
 - Время работы отличалось -- самым долгим оказался метод `advanced`, самым быстрым -- `numpy`
-![mountains](img/deg/mountains_advanced_2.bmp)![mountains](img/deg/mountains_advanced_4.bmp)![mountains](img/deg/mountains_advanced_8.bmp)![mountains](img/deg/mountains_advanced_16.bmp)![mountains](img/deg/mountains_advanced_32.bmp)![mountains](img/deg/mountains_advanced_64.bmp)
+
+
+| <!-- -->      | <!-- -->        | <!-- -->      |
+|:-------------:|:---------------:|:-------------:|
+| ![mountains](img/deg/mountains_advanced_2.bmp) | ![mountains](img/deg/mountains_advanced_4.bmp) | ![mountains](img/deg/mountains_advanced_8.bmp) |
+| ![mountains](img/deg/mountains_advanced_16.bmp) | ![mountains](img/deg/mountains_advanced_32.bmp) | ![mountains](img/deg/mountains_advanced_64.bmp) |
 
 ## Вывод
 
