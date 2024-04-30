@@ -13,12 +13,12 @@
 ## Результаты
 
 Работа методов почти не отличается друг от друга. Например, вот разультаты сжатия в 2 раза:
-| Numpy                            | Power simple                            | Block power                            |
+| Numpy                            | Simple                            | Advance                         |
 |----------------------------------|-----------------------------------------|----------------------------------------|
 | ![example](img/2/example_numpy.bmp) | ![example](img/2/example_simple.bmp) | ![example](img/2/example_advanced.bmp) |
 
 А вот разультаты сжатия в 4 раза:
-| Numpy                            | Power simple                            | Block power                            |
+| Numpy                            | Simple                          | Advance                          |
 |----------------------------------|-----------------------------------------|----------------------------------------|
 | ![Lena](img/4/Lena_numpy.bmp) | ![Lena](img/4/Lena_simple.bmp) | ![Lena](img/4/Lena_advanced.bmp) |
 
