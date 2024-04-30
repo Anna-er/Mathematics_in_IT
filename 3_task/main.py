@@ -1,6 +1,7 @@
 import argparse
 import struct
 import time
+# import os
 from pathlib import Path
 
 import numpy as np
@@ -72,7 +73,7 @@ def simple(channel: np.ndarray, k: int, duration: int) -> bytes:
 
         if counter == 0:
             break
-        channel -= eigenvalue * np.outer(u[:, i], v)
+        channel = channel - eigenvalue * np.outer(u[:, i], v)
 
     data = np.concatenate((u.ravel(), s, vt.ravel()))
     return data.astype(np.float32).tobytes()
@@ -135,12 +136,14 @@ if __name__ == '__main__':
     parser.add_argument('--compression', type=float, required=True)
 
     args = parser.parse_args()
-    path_to_result_image = f'{Path(args.path).stem}_{args.method}.bmp'
+    path_to_result_image = f'{Path(args.path).stem}_{args.method}_{int(args.compression)}.bmp'
     temp_output = f'{Path(args.path).stem}_{args.method}_compressed.cbmp'
     start_time = time.time()
-    
+
     if args.mode == 'compress':
         compress(args.path, temp_output, args.compression, args.method)
+        # decompress(temp_output, path_to_result_image)
+        # os.remove(temp_output)
     elif args.mode == 'decompress':
         decompress(args.path, path_to_result_image.replace('_compressed', ''))
 
