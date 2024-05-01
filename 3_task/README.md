@@ -33,6 +33,19 @@
 | ![mountains](img/deg/mountains_advanced_2.bmp) | ![mountains](img/deg/mountains_advanced_4.bmp) | ![mountains](img/deg/mountains_advanced_8.bmp) |
 | ![mountains](img/deg/mountains_advanced_16.bmp) | ![mountains](img/deg/mountains_advanced_32.bmp) | ![mountains](img/deg/mountains_advanced_64.bmp) |
 
+## Сравнение скорости выполнения
+Средние результаты за 10 запусков на изобрадении размером `1000 * 667` приведены в таблице ниже.
+
+| compression |	Numpy	| Simple	| Advanced | 
+|----------------------------------|-----------------------------------------|----------------------------------------|----------------------------------------|
+| 2	| 0.98 sec	| 8.16 sec	| 3,06 sec | 
+| 4	| 0.94 sec	| 5.03 sec	| 3.13 sec | 
+| 8	| 0.96 sec	| 3.75 sec	| 3.05 sec | 
+| 16	| 0.77 sec	| 3.30 sec	| 2.47 sec | 
+| 32	| 0.73 sec	| 3.15 sec	| 0.93 sec | 
+
+Заметим, что чем больше коэффицент сжатия, тем быстрее работает программа. А также, что при любом коэффиценте сжатия время `Simple` `>` `Advanced` `>` `Numpy`.
+
 ## Вывод
 
 Реализованные методы достаточно корректно работают.
